@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { AuthProvider } from "./AuthProvider";
 
 export const metadata: Metadata = {
   title: "Describe Art",
@@ -13,9 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
+      <body>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

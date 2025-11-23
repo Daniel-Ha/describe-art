@@ -1,11 +1,14 @@
-import Image from "next/image";
+"use client";
+
+import { login } from "./lib/actions/auth";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start">
-        <h1 className="text-4xl font-bold">Describe Art</h1>
-      </main>
-    </div>
+    <main className="flex items-center justify-center md:h-screen">
+      <div className="flex min-h-screen items-center justify-center">
+        <h1 className="text-4xl font-bold">You are not signed in</h1>
+        <button onClick={() => login()}>Sign in with Spotify</button>
+      </div>
+    </main>
   );
 }
