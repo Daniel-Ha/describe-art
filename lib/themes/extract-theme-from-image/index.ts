@@ -1,0 +1,1 @@
+export { extractThemeFromImage } from "./extract-theme-from-image";
